@@ -1,0 +1,36 @@
+.container {
+    width: 48rem;
+    margin: auto;
+    background-color: white;
+    padding-top: 90;
+}
+
+
+.YourStyle {
+    flex-direction: column;
+    background-color: white;
+    padding-top: 10px;
+    border: 10rem;
+    border-top: 10px;
+}
+.font{
+    font-weight: bold;
+    padding-left: 2%;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .content-con {
+        flex-direction: column;
+    }
+
+    .content-con:nth-child(1) .content-r {
+        order: 1;
+    }
+}

@@ -1,0 +1,62 @@
+.container {
+    width: 48rem;
+    margin: auto;
+    background-color: white;
+    padding-top: 90;
+}
+
+
+div.YourStyle {
+    flex-direction: column;
+    background-color: white;
+    padding-top: 10px;
+    border: 10rem;
+    border-top: 10px;
+}
+.font{
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+div.scrollmenu {
+    background-color: #ffffff;
+    overflow: auto;
+    white-space: nowrap;
+    flex-direction: row;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .content-con {
+        flex-direction: column;
+    }
+
+    .content-con:nth-child(1) .content-r {
+        order: 1;
+    }
+}

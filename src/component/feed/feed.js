@@ -1,14 +1,16 @@
 import React from 'react'
 import './feed.css';
+import HeaderFeed from './header-feed'
 
 
 function Feed() {
-    return ( 
+    return (
         <div style={{ width: '48rem', margin: 'auto', backgroundColor: 'white', paddingTop: 70 }}>
+            <HeaderFeed />
             <div >
                 <div >
-                    <div style={{width:'100%',height:30,paddingLeft:10 }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12,}}>ผู้ชาย</a>
+                    <div style={{ width: '100%', height: 30, paddingLeft: 10 }}>
+                        <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
                     </div>
 
                     <div class="scrollmenu">
@@ -25,7 +27,7 @@ function Feed() {
                 </div>
             </div>
             <div className='YourStyle'>
-                <div style={{height:'4rem',paddingTop:5}}>
+                <div style={{ height: '4rem', paddingTop: 5 }}>
                     <div> <a style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >สไตล์ของคุณ</a></div>
                     <div> <a className='font'>อัพเดทขนาดและสไตล์ของคุณที่นี่</a></div>
                 </div>

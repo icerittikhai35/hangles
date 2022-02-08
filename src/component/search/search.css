@@ -30,7 +30,7 @@ div.scrollmenu {
     background-color: #ffffff;
     overflow: auto;
     white-space: nowrap;
-    flex-direction: row;
+    
   }
   
   div.scrollmenu a {

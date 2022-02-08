@@ -34,18 +34,7 @@ const tabs = [{
 const Navigation = (props) => {
   return (
     <div >
-      <nav className="navbar fixed-top  fixed-top " role="navigation" >
-        <div style={{padding:'15px 20px',}}>
-          <img src={Notification} alt="" width={20} />
-          
-        </div>
-        <div style={{margin:'auto',}}>
-          <img src={Logo} alt="" width={110} />
-        </div>
-        <div style={{padding:'15px 20px'}}>
-          <img src={Shopbag} alt="" width={20} />
-        </div>
-      </nav>
+    
       <nav className="navbar fixed-bottom navbar-light  bottom-tab-nav " role="navigation" style={{ backgroundColor: 'white', height: 62, width: '48rem', margin: 'auto' }}>
         <Nav className="w-100">
           <div className=" d-flex flex-row justify-content-around w-100">
@@ -55,7 +44,6 @@ const Navigation = (props) => {
                   <NavLink to={tab.route} className="bottom-nav-link" activeClassName="active">
                     <div>
                       <FontAwesomeIcon size="lg" icon={tab.icon} />
-
                     </div>
                   </NavLink>
                 </NavItem>

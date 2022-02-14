@@ -1,39 +1,134 @@
-import React from 'react'
-import { Tabs, Tab, } from "@material-ui/core";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import HeaderProfile from './header-profile'
+import Store from './store'
+import Review from './review'
 
-function Profile() {
 
 
+function Profile(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="Profile"
+            hidden={value !== index}
+            id={`Profile-${index}`}
+            aria-labelledby={`tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+Profile.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+};
+
+function allProps(index) {
+    return {
+        id: `tab-${index}`,
+        'aria-controls': `Profile-${index}`,
+    };
+}
+
+export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const valueStar = 4.5;
 
 
     return (
-        <div style={{ width: '48rem', margin: 'auto', backgroundColor: 'white', paddingTop: 0 }}>
+        <div style={styles.container}>
             <HeaderProfile />
-            <div style={{ width: '48rem', margin: 'auto', backgroundColor: 'white', paddingTop: 90 }}>
-                <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    style={{ margin: 'auto', width: '100%', alignItem: 'center' }}
-                    TabIndicatorProps={{
-                        style: { background: "#35bdb4", height: "2px", top: "40px" }
-                    }}
-                >
-                    <Tab label="ร้านค้า" value={0} style={{ flex: 1 }} />
-                    <Tab label="ร้านค้า" value={1} style={{ flex: 1 }} />
-                    <Tab label="รีวิว" value={2} style={{ flex: 1 }} />
-                    <Tab label="รีวิว" value={3} style={{ flex: 1 }} />
-                </Tabs>
+            <Box sx={{ width: '100%', }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'white' }}>
+                    <Tabs value={value} onChange={handleChange}
+                        aria-label="basic tabs example"
+                        TabIndicatorProps={{ style: { background: '#35bdb4' } }}
+                        textColor="inherit"
+                        variant="fullWidth"
+                    >
+                        <Tab label="ร้านค้า" {...allProps(0)} />
+                        <Tab label="รีวิว" {...allProps(1)} />
+                    </Tabs>
+                </Box>
+                {/* หน้าร้านค้า แก้ไขที่ store.js */}
+                <Profile value={value} index={0}>
+                    <Store />
+                </Profile>
 
 
-            </div>
-        </div>
-    )
+                {/* หน้าร้านค้า แก้ไขที่ review.js */}
+                <Profile value={value} index={1}>
+                    <Review />
+                </Profile>
+
+            </Box>
+
+
+        </div >
+    );
+
 }
+const styles = {
 
-export default Profile
+    container: {
+        maxWidth: '760px',
+        margin: 'auto',
+        backgroundColor: 'white',
+        paddingTop: 60,
+        height: '100%'
+    },
+
+    boxCard: {
+        boxShadow: "0 0 3px 2px #eeeeee", /* the shadow */
+        width: '100%',
+        height: 100,
+        margin: 'auto',
+        backgroundColor: '#fbfbfb',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    well: {
+        width: '100%',
+        height: 100,
+        margin: 'auto',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    font: {
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+    fontDeteil: {
+        fontSize: 12,
+        fontWeight: 'normal'
+
+    },
+    Imgprofile: {
+        borderRadius: 200,
+    }
+
+};

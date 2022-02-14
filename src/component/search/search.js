@@ -5,7 +5,7 @@ import HeaderSearch from './hearder-search'
 
 function Search() {
     return (
-        <div style={{ width: '48rem', margin: 'auto', backgroundColor: 'white', paddingTop: 70, }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, }}>
             <HeaderSearch />
             <div >
                 <div >

@@ -12,11 +12,10 @@ import Profile from './component/profile/profile';
 
 function App() {
   return (
-    <div style={{backgroundColor:'#eeeeee',flex:1}}>
+    <div style={{backgroundColor:'#eeeeee',minHeight:'59rem'}}>
       <BrowserRouter >
-        
         <Switch>
-          <Route exact  path="/" component={Feed} />
+          <Route exact  path="/feed" component={Feed} />
           <Route path="/Search" component={Search} />
           <Route path="/Createdshop" component={Createdshop} />
           <Route path="/Chat" component={Chat} />

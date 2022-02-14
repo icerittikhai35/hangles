@@ -5,9 +5,9 @@ import HeaderFeed from './header-feed'
 
 function Feed() {
     return (
-        <div style={{ width: '48rem', margin: 'auto', backgroundColor: 'white', paddingTop: 70 }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, height: '100%' }}>
             <HeaderFeed />
-            <div >
+            <div className='YourStyle'>
                 <div >
                     <div style={{ width: '100%', height: 30, paddingLeft: 10 }}>
                         <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
@@ -21,8 +21,6 @@ function Feed() {
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-
-
                     </div>
                 </div>
             </div>

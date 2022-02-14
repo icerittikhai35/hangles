@@ -2,9 +2,10 @@
   border-bottom: solid 1px #EBEBEB;
   background-color: white;
   height: 3.9rem;
-  width: 48rem;
+  max-width: 760px;
   margin: auto;
 }
+
 
 .bottom-tab-nav {
   border-top: solid 1px #EBEBEB;
@@ -15,9 +16,9 @@
   color: #000000;
 }
 
- 
 .bottom-nav-link.active {
   color: #35bdb4;
+
 }
 
 .bottom-tab-label {

@@ -7,8 +7,8 @@ import Shopbag from'../../img/shop-bag.png'
 
 const HeaderFeed = (props) => {
   return (
-    <div >
-      <nav className="navbar fixed-top  fixed-top " role="HeaderFeed" >
+    <div style={{width:'100%'}}>
+      <nav className="navbar fixed-top " role="HeaderFeed" >
         <div style={{padding:'15px 20px',}}>
           <img src={Notification} alt="" width={20} />
           

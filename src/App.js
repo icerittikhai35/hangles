@@ -7,6 +7,7 @@ import Search from './component/search/search';
 import Createdshop from './component/createdshop/createdshop';
 import Chat from './component/chat/chat';
 import Profile from './component/profile/profile';
+import Notifications from './component/notifications/notifications'
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Createdshop" component={Createdshop} />
           <Route path="/Chat" component={Chat} />
           <Route path="/Profile" component={Profile} />
+          <Route path="/Notifications" component={Notifications} />
         </Switch>
         <Navigator />
       </BrowserRouter>

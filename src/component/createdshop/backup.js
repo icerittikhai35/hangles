@@ -1,11 +1,12 @@
+
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MobileStepper from '@material-ui/core/MobileStepper';
+import { makeStyles } from '@material-ui/core/styles';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Pages from '../notifications/notifications'
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import Pages from '../search/search'
 
 const useStyles = makeStyles(theme => ({
 }));
@@ -19,7 +20,6 @@ export default function Createdshop() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = React.useState(0);
     const steps = getSteps();
-    const theme = useTheme();
 
     const handleNext = () => {
         setActiveStep(prevActiveStep => prevActiveStep + 1);
@@ -37,7 +37,7 @@ export default function Createdshop() {
     function getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
-                return <Pages />;
+                return <Pages/>;
             case 1:
                 return 'Account Component';
             default:
@@ -47,6 +47,13 @@ export default function Createdshop() {
 
     return (
         <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, height: '100%' }}>
+            <Stepper activeStep={activeStep} alternativeLabel>
+                {steps.map(label => (
+                    <Step key={label}>
+                        <StepLabel>{label}</StepLabel>
+                    </Step>
+                ))}
+            </Stepper>
             <div>
                 {activeStep === steps.length ? (
                     <div>
@@ -54,32 +61,22 @@ export default function Createdshop() {
                         <Button onClick={handleReset}>Reset</Button>
                     </div>
                 ) : (
-                    <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', height: '100%' }}>
+                    <div  style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', height: '100%' }}>
                         <div>{getStepContent(activeStep)}</div>
+                        <div>
+                            <Button
+                                disabled={activeStep === 0}
+                                onClick={handleBack}
+                            >
+                                Back
+                            </Button>
+                            <Button variant="contained" color="primary" onClick={handleNext}>
+                                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                            </Button>
+                        </div>
                     </div>
                 )}
             </div>
-
-            <MobileStepper
-                variant="dots"
-                steps={3}
-                position="static"
-                activeStep={activeStep}
-                className={classes.root}
-                nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 2}>
-                        ถัดไป
-                        {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-                    </Button>
-                }
-                backButton={
-                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                        {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                        กลับ
-                    </Button>
-                }
-            />
-
         </div>
     );
 }

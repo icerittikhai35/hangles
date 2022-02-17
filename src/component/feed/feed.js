@@ -1,7 +1,7 @@
 import React from 'react'
 import './feed.css';
 import HeaderFeed from './header-feed'
-
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 function Feed() {
     return (
@@ -9,8 +9,9 @@ function Feed() {
             <HeaderFeed />
             <div className='YourStyle'>
                 <div >
-                    <div style={{ width: '100%', height: 30, paddingLeft: 10 }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
+                    <div style={{ borderColor: 'white', display: 'flex', justifyContent: 'space-between',height:30 }}>
+                        <a style={{ fontWeight: 'bold', fontSize: 12,paddingLeft:'3%' }}>ผู้ชาย</a>
+                        <a style={{ fontWeight: 'bold', fontSize: 12,paddingRight:'3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></a>
                     </div>
 
                     <div class="scrollmenu">

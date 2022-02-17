@@ -13,7 +13,7 @@ import Notifications from './component/notifications/notifications'
 
 function App() {
   return (
-    <div style={{backgroundColor:'#eeeeee',minHeight:'59rem'}}>
+    <div style={{backgroundColor:'#eeeeee',minHeight: '100vh'}}>
       <BrowserRouter >
         <Switch>
           <Route exact  path="/feed" component={Feed} />

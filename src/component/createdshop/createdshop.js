@@ -9,6 +9,7 @@ import PageName from '../createdshop/page-nameshop';
 import PageDetail from '../createdshop/page-detail';
 import PageMapShop from '../createdshop/page-map';
 import PageAdressShop from '../createdshop/page-address';
+import PageLogistic from '../createdshop/page-logistic';
 
 const useStyles = makeStyles(theme => ({
 }));
@@ -43,13 +44,15 @@ export default function Createdshop() {
                 return <PageMapShop />;
             case 4:
                 return <PageAdressShop />;
+            case 5:
+                return <PageLogistic />;
             default:
                 return <PageCreate />;
         }
     }
     console.log(getStepContent)
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', height: '100vh' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', minHeight: '100vh' }}>
             <div>
                 <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', height: '100%' }}>
                     <div>{getStepContent(activeStep)}</div>
@@ -58,13 +61,13 @@ export default function Createdshop() {
 
             <MobileStepper
                 variant="dots"
-                steps={5}
+                steps={6}
                 position="static"
                 activeStep={activeStep}
                 className={classes.root}
                 style={{ backgroundColor: '#ffffff' }}
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 4}>
+                    <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
                         ถัดไป
                         {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                     </Button>
@@ -80,3 +83,4 @@ export default function Createdshop() {
         </div>
     );
 }
+

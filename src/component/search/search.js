@@ -5,12 +5,12 @@ import HeaderSearch from './hearder-search'
 
 function Search() {
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70,minHeight: '100vh' }}>
             <HeaderSearch />
             <div >
                 <div >
                     <div style={{ width: '100%', height: 30, paddingLeft: 10 }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
+                        <label style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</label>
                     </div>
                     <div class="scrollmenu" >
 
@@ -25,7 +25,7 @@ function Search() {
                 </div>
                 <div >
                     <div style={{ width: '100%', height: 30, paddingLeft: 10 }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
+                        <label style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</label>
                     </div>
                     <div class="scrollmenu">
                         <img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'20%'} />
@@ -41,7 +41,7 @@ function Search() {
                 </div>
                 <div >
                     <div style={{ width: '100%', height: 30, paddingLeft: 10, }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</a>
+                        <label style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</label>
                     </div>
                     <div class="scrollmenu">
                         <img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'20%'} />

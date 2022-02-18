@@ -15,14 +15,14 @@ function PageDetailShop() {
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: 70 }}>
-                    <div style={{ width: 100, margin: 'auto', paddingTop: 90 }}>
+                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: '2rem' }}>
+                    <div style={{ width: 100, margin: 'auto', paddingTop: '5rem' }}>
                         <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 100, height: 100, backgroundColor: '#eeeeee' }} />
                     </div>
-                    <div style={{ width: '50%', margin: 'auto', textAlign: 'center', paddingTop: 50 }}>
+                    <div style={{ width: '80%', margin: 'auto', textAlign: 'center', paddingTop: 50 }}>
                         <label style={{ color: '#35bdb4', fontSize: 20, fontWeight: 'bold' }}>บอกเกี่ยวกับร้านคุณ</label>
                     </div>
-                    <div style={{ width: '50%', margin: 'auto', textAlign: 'center', }}>
+                    <div style={{ width: '80%', margin: 'auto', textAlign: 'center', }}>
                         <label style={{ color: 'black', fontSize: 12, fontWeight: 'normal' }}>เกี่ยวกับรูปแบบการสร้างร้านค้าของคุณและบอกว่าคุณกำลังจะขายอะไร?</label>
                     </div>
 

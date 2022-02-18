@@ -5,13 +5,13 @@ import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArro
 
 function Feed() {
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, height: '100%' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh' }}>
             <HeaderFeed />
             <div className='YourStyle'>
                 <div >
                     <div style={{ borderColor: 'white', display: 'flex', justifyContent: 'space-between',height:30 }}>
-                        <a style={{ fontWeight: 'bold', fontSize: 12,paddingLeft:'3%' }}>ผู้ชาย</a>
-                        <a style={{ fontWeight: 'bold', fontSize: 12,paddingRight:'3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></a>
+                        <label style={{ fontWeight: 'bold', fontSize: 12,paddingLeft:'3%' }}>ผู้ชาย</label>
+                        <label style={{ fontWeight: 'bold', fontSize: 12,paddingRight:'3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></label>
                     </div>
 
                     <div class="scrollmenu">
@@ -27,8 +27,8 @@ function Feed() {
             </div>
             <div className='YourStyle'>
                 <div style={{ height: '4rem', paddingTop: 5 }}>
-                    <div> <a style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >สไตล์ของคุณ</a></div>
-                    <div> <a className='font'>อัพเดทขนาดและสไตล์ของคุณที่นี่</a></div>
+                    <div> <label style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >สไตล์ของคุณ</label></div>
+                    <div> <label className='font'>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
                 </div>
 
                 <table style={{ margin: 'auto' }}>

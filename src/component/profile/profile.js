@@ -15,7 +15,6 @@ function Profile(props) {
 
     return (
         <div
-            role="Profile"
             hidden={value !== index}
             id={`Profile-${index}`}
             aria-labelledby={`tab-${index}`}
@@ -49,7 +48,6 @@ export default function BasicTabs() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    const valueStar = 4.5;
 
 
     return (
@@ -92,7 +90,7 @@ const styles = {
         margin: 'auto',
         backgroundColor: 'white',
         paddingTop: 60,
-        height: '100%'
+        minHeight:'100vh'
     },
 
     boxCard: {
@@ -104,7 +102,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
     well: {
@@ -114,7 +111,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
 

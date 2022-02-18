@@ -15,7 +15,7 @@ function PageNameShop() {
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: 70 }}>
+                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: '1rem' }}>
                     <div style={{ width: 300, margin: 'auto', textAlign: 'center', }}>
                         <label style={{ color: '#35bdb4', fontSize: 20, fontWeight: 'bold' }}>เพิ่มชื่อที่เเสดง</label>
                     </div>

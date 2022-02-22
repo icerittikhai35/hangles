@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Navigator from './Navigation';
 import Feed from './component/feed/feed';
 import Search from './component/search/search';
 import Createdshop from './component/createdshop/createdshop';
 import Chat from './component/chat/chat';
 import Profile from './component/profile/profile';
-import Notifications from './component/notifications/notifications'
+import Notifications from './component/notifications/notifications';
+import InsertProduct from './component/insert product/insert-product';
 
 
 
@@ -22,8 +22,8 @@ function App() {
           <Route path="/Chat" component={Chat} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Notifications" component={Notifications} />
+          <Route path="/InsertProduct" component={InsertProduct} />
         </Switch>
-        <Navigator />
       </BrowserRouter>
     </div>
   );

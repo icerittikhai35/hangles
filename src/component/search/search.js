@@ -1,11 +1,12 @@
 import React from 'react'
 import './search.css'
 import HeaderSearch from './hearder-search'
-
+import Navigation from '../../Navigation'
 
 function Search() {
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70,minHeight: '100vh' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh' }}>
+            <Navigation />
             <HeaderSearch />
             <div >
                 <div >

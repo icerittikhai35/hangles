@@ -4,10 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import HeaderProfile from './header-profile'
-import Store from './store'
-import Review from './review'
-
+import HeaderProfile from './header-profile';
+import Store from './store';
+import Review from './review';
+import Navigation from '../../Navigation';
 
 
 function Profile(props) {
@@ -52,6 +52,7 @@ export default function BasicTabs() {
 
     return (
         <div style={styles.container}>
+            <Navigation />
             <HeaderProfile />
             <Box sx={{ width: '100%', }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'white' }}>
@@ -90,7 +91,7 @@ const styles = {
         margin: 'auto',
         backgroundColor: 'white',
         paddingTop: 60,
-        minHeight:'100vh'
+        minHeight: '100vh'
     },
 
     boxCard: {

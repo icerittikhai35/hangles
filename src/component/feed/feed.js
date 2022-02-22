@@ -1,17 +1,19 @@
 import React from 'react'
 import './feed.css';
-import HeaderFeed from './header-feed'
+import HeaderFeed from './header-feed';
+import Navigation from '../../Navigation'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 function Feed() {
     return (
         <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh' }}>
+            <Navigation />
             <HeaderFeed />
             <div className='YourStyle'>
                 <div >
-                    <div style={{ borderColor: 'white', display: 'flex', justifyContent: 'space-between',height:30 }}>
-                        <label style={{ fontWeight: 'bold', fontSize: 12,paddingLeft:'3%' }}>ผู้ชาย</label>
-                        <label style={{ fontWeight: 'bold', fontSize: 12,paddingRight:'3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></label>
+                    <div style={{ borderColor: 'white', display: 'flex', justifyContent: 'space-between', height: 30 }}>
+                        <label style={{ fontWeight: 'bold', fontSize: 12, paddingLeft: '3%' }}>ยอดนิยม</label>
+                        <label style={{ fontWeight: 'bold', fontSize: 12, paddingRight: '3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></label>
                     </div>
 
                     <div class="scrollmenu">

@@ -1,17 +1,16 @@
 import React from 'react';
-import Cancel from '../../img/cancel.png';
-import True from '../../img/true-e-logistics.jpg';
-import Ninjavan from '../../img/ninjavan.png';
-import FlashExpress from '../../img/flash.png';
-import JandT from '../../img/j&t.png';
-import Thaipost from '../../img/thaipost.png';
+import Cancel from '../../../img/cancel.png';
+import True from '../../../img/true-e-logistics.jpg';
+import Ninjavan from '../../../img/ninjavan.png';
+import FlashExpress from '../../../img/flash.png';
+import JandT from '../../../img/j&t.png';
+import Thaipost from '../../../img/thaipost.png';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 import SwitchUnstyled, { switchUnstyledClasses } from '@mui/base/SwitchUnstyled';
 
 
 function PageLogisticShop() {
-
     return (
 
         <div style={{ maxWidth: '760px', margin: 'auto', minHeight: '10vh', alignItems: 'stretch', backgroundColor: 'white', display: 'flex', }}>
@@ -47,7 +46,7 @@ function PageLogisticShop() {
                             </div>
                         </div>
                         <div style={{paddingRight:'20px'}}>
-                            <SwitchUnstyled component={Root} defaultChecked />
+                            <SwitchUnstyled component={Root} defaultChecked={false}  />
                         </div>
                     </div>
 
@@ -72,7 +71,7 @@ function PageLogisticShop() {
                             </div>
                         </div>
                         <div style={{paddingRight:'20px'}}>
-                            <SwitchUnstyled component={Root} defaultChecked />
+                            <SwitchUnstyled component={Root} defaultChecked={false}  />
                         </div>
                     </div>
 
@@ -97,7 +96,7 @@ function PageLogisticShop() {
                             </div>
                         </div>
                         <div style={{paddingRight:'20px'}}>
-                            <SwitchUnstyled component={Root} defaultChecked />
+                            <SwitchUnstyled component={Root} defaultChecked={false}  />
                         </div>
                     </div>
 
@@ -122,7 +121,7 @@ function PageLogisticShop() {
                             </div>
                         </div>
                         <div style={{paddingRight:'20px'}}>
-                            <SwitchUnstyled component={Root} defaultChecked />
+                            <SwitchUnstyled component={Root} defaultChecked={false}/>
                         </div>
                     </div>
 
@@ -147,7 +146,7 @@ function PageLogisticShop() {
                             </div>
                         </div>
                         <div style={{paddingRight:'20px'}}>
-                            <SwitchUnstyled component={Root} defaultChecked />
+                            <SwitchUnstyled component={Root} defaultChecked={false}  />
                         </div>
                     </div>
 

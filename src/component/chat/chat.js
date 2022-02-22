@@ -4,7 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import HeaderChat from './header-chat'
+import HeaderChat from './header-chat';
+import Navigation from '../../Navigation'
 
 function Chat(props) {
     const { children, value, index, ...other } = props;
@@ -47,6 +48,7 @@ export default function BasicTabs() {
 
     return (
         <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh' }}>
+            <Navigation />
             <HeaderChat />
             <Box sx={{ width: '100%' }}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

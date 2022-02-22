@@ -4,12 +4,15 @@ import MobileStepper from '@material-ui/core/MobileStepper';
 import Button from '@material-ui/core/Button';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import PageCreate from '../createdshop/page-create';
-import PageName from '../createdshop/page-nameshop';
-import PageDetail from '../createdshop/page-detail';
-import PageMapShop from '../createdshop/page-map';
-import PageAdressShop from '../createdshop/page-address';
-import PageLogistic from '../createdshop/page-logistic';
+import PageCreate from '../createdshop/pageCreateShop/page-create';
+import PageName from '../createdshop/pageCreateShop/page-nameshop';
+import PageDetail from '../createdshop/pageCreateShop/page-detail';
+import PageMapShop from '../createdshop/pageCreateShop/page-map';
+import PageAdressShop from '../createdshop/pageCreateShop/page-address';
+import PageLogistic from '../createdshop/pageCreateShop/page-logistic';
+import PagePhone from '../createdshop/pageCreateShop/page-phone';
+import PageOTP from '../createdshop/pageCreateShop/page-OTP';
+
 
 const useStyles = makeStyles(theme => ({
 }));
@@ -46,6 +49,10 @@ export default function Createdshop() {
                 return <PageAdressShop />;
             case 5:
                 return <PageLogistic />;
+            case 6:
+                return <PagePhone />;
+            case 7:
+                return <PageOTP />;
             default:
                 return <PageCreate />;
         }
@@ -61,13 +68,13 @@ export default function Createdshop() {
 
             <MobileStepper
                 variant="dots"
-                steps={6}
+                steps={8}
                 position="static"
                 activeStep={activeStep}
                 className={classes.root}
                 style={{ backgroundColor: '#ffffff' }}
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+                    <Button size="small" onClick={handleNext} disabled={activeStep === 7}>
                         ถัดไป
                         {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
                     </Button>

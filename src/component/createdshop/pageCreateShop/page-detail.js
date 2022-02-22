@@ -1,11 +1,11 @@
 import React from 'react'
-import ProfilePic from '../../img/profile-pic.jpeg'
+import ProfilePic from '../../../img/profile-pic.jpeg'
 import Avatar from '@mui/material/Avatar';
-import Cancel from '../../img/cancel.png'
+import Cancel from '../../../img/cancel.png'
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 
-function PageMapShop() {
+function PageDetailShop() {
     return (
 
         <div style={{ maxWidth: '760px', margin: 'auto', minHeight: '10vh', alignItems: 'stretch', backgroundColor: 'white', display: 'flex', }}>
@@ -20,17 +20,18 @@ function PageMapShop() {
                         <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 100, height: 100, backgroundColor: '#eeeeee' }} />
                     </div>
                     <div style={{ width: '80%', margin: 'auto', textAlign: 'center', paddingTop: 50 }}>
-                        <label style={{ color: '#35bdb4', fontSize: 20, fontWeight: 'bold' }}>เพิ่มสถานที่เกี่ยวกับร้านของคุณ</label>
+                        <label style={{ color: '#35bdb4', fontSize: 20, fontWeight: 'bold' }}>บอกเกี่ยวกับร้านคุณ</label>
                     </div>
                     <div style={{ width: '80%', margin: 'auto', textAlign: 'center', }}>
-                        <label style={{ color: 'black', fontSize: 12, fontWeight: 'normal' }}>โปรดระบุตำแหน่งและสถานที่ให้กับผู้ใช้</label>
+                        <label style={{ color: 'black', fontSize: 12, fontWeight: 'normal' }}>เกี่ยวกับรูปแบบการสร้างร้านค้าของคุณและบอกว่าคุณกำลังจะขายอะไร?</label>
                     </div>
 
                     <div style={{ width: '90%', margin: 'auto', paddingTop: 45, }}>
                         <TextField
                             id="standard-full-width"
-                            style={{ margin: 0, textAlign: 'center' }}
-                            placeholder="Location"
+
+                            style={{ margin: 0 }}
+                            placeholder="Wirte a paragraph or text in here"
                             fullWidth
                             color="red"
                             margin="normal"
@@ -51,4 +52,4 @@ function PageMapShop() {
 }
 
 
-export default PageMapShop
+export default PageDetailShop

@@ -1,7 +1,7 @@
 import React from 'react'
-import ProfilePic from '../../img/profile-pic.jpeg'
+import ProfilePic from '../../../img/profile-pic.jpeg'
 import Avatar from '@mui/material/Avatar';
-import Cancel from '../../img/cancel.png'
+import Cancel from '../../../img/cancel.png'
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 

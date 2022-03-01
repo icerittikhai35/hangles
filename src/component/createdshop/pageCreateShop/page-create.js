@@ -9,7 +9,7 @@ function PageCreate() {
         <div style={{ maxWidth: '760px', margin: 'auto',  height: '80vh', alignItems: 'stretch', backgroundColor: '#ffffff', display: 'flex',  }}>
             <div style={{ width: '100%', margin: 'auto', height: '100%', display: 'flex', backgroundImage: `url(${"https://static.thehoneycombers.com/wp-content/uploads/sites/2/2020/07/Reckless-Erika-local-fashion-brands-singapore.png"})`, }}>
                 <div style={{ padding: '15px 20px',position:'absolute' }}>
-                    <Link to="/Feed">
+                    <Link to="/">
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>

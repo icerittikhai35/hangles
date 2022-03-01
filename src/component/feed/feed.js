@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
 import './feed.css';
 import HeaderFeed from './header-feed';
 import Navigation from '../../Navigation'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import DataStore from '../../dataStore';
+
 
 function Feed() {
+    let boxStore =
+        DataStore.map((item, e) => {
+            return (
+                <img src={item.Image} alt="new" width={'100%'} style={{ marginBottom: '2%', }} />
+            )
+        });
+
+
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh', paddingBottom: '5vh' }}>
             <Navigation />
             <HeaderFeed />
             <div className='YourStyle'>
@@ -33,38 +43,20 @@ function Feed() {
                     <div> <label className='font'>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
                 </div>
 
-                <table style={{ margin: 'auto' }}>
+                <table style={{ margin: 'auto', }}>
                     <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
-                    <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
-                    <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
-                    <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
-                    <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
-                    <tr >
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                        <td><img src="https://a.lnwfile.com/snzt77.jpg" alt="new" width={'100%'} /></td>
-                    </tr>
+                        <td>
+                            <div style={{
+                                gridTemplateColumns: "repeat(3,33%)",
 
+                                display: "grid",
+                                justifyContent: 'space-between',
+
+                            }}>
+                                {boxStore}
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

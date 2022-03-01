@@ -16,7 +16,7 @@ function PageLogisticShop() {
         <div style={{ maxWidth: '760px', margin: 'auto', minHeight: '10vh', alignItems: 'stretch', backgroundColor: 'white', display: 'flex', }}>
             <div style={{ width: '100%', margin: 'auto', height: '100%', display: 'flex', }}>
                 <div style={{ padding: '15px 20px', position: 'absolute' }}>
-                    <Link to="/Feed">
+                    <Link to="/">
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>

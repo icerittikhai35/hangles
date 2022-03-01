@@ -8,6 +8,7 @@ import Chat from './component/chat/chat';
 import Profile from './component/profile/profile';
 import Notifications from './component/notifications/notifications';
 import InsertProduct from './component/insert product/insert-product';
+import TypeProduct from './component/insert product/pages/typeProduct';
 
 
 
@@ -16,13 +17,14 @@ function App() {
     <div style={{backgroundColor:'#eeeeee',minHeight: '100vh'}}>
       <BrowserRouter >
         <Switch>
-          <Route exact  path="/feed" component={Feed} />
+          <Route exact  path="/" component={Feed} />
           <Route path="/Search" component={Search} />
           <Route path="/Createdshop" component={Createdshop} />
           <Route path="/Chat" component={Chat} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Notifications" component={Notifications} />
           <Route path="/InsertProduct" component={InsertProduct} />
+          <Route path="/TypeProduct" component={TypeProduct} />
         </Switch>
       </BrowserRouter>
     </div>

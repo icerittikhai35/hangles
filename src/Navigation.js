@@ -6,7 +6,7 @@ import { faSearch, faHome, faPlusCircle, faCommentDots, faUserCircle } from '@fo
 
  
 const tabs = [{
-  route: "/feed",
+  route: "/",
   icon: faHome,
   label: "Feed"
 }, {

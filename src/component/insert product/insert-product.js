@@ -1,5 +1,6 @@
 import React from 'react'
-import Cancel from '../../img/cancel.png'
+import Cancel from '../../img/cancel.png';
+import next from '../../img/right-chevron.png';
 import { Link } from 'react-router-dom';
 
 
@@ -9,17 +10,35 @@ function InsertProduct() {
         <div style={{ maxWidth: '760px', margin: 'auto', minHeight: '100vh', alignItems: 'stretch', backgroundColor: 'white', }}>
             <div style={{ width: '100%', margin: 'auto', height: '100%', display: 'flex', }}>
                 <div style={{ padding: '15px 20px', position: 'absolute' }}>
-                    <Link to="/Feed">
+                    <Link to="/">
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: '2rem', }}>
+                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: '1rem', }}>
                     <div style={{ width: '80%', margin: 'auto', textAlign: 'center', paddingTop: '0rem' }}>
-                        <label style={{ color: '#000000', fontSize: 20, fontWeight: 'normal' }}>เพิ่มสินค้า</label >
+                        <label style={{ color: '#000000', fontSize: 18, fontWeight: 'normal' }}>เพิ่มสินค้า</label >
+                    </div>
+                    <div style={{ width: '80%', margin: 'auto', paddingTop: '2rem', display: 'flex', justifyContent: 'space-around' }}>
+                        <div style={styles.boxImage}>
+                        </div>
+                        <div style={styles.boxImage}>
+                        </div>
+                        <div style={styles.boxImage}>
+                        </div>
+                        <div style={styles.boxImage}>
+                        </div>
+                        <div style={styles.boxImage}>
+                        </div>
+
+                    </div>
+                    <div style={{ width: '80%', margin: 'auto', textAlign: 'center', paddingTop: '0.5rem', }}>
+                        <Link to="/InsertProduct">
+                            <button type="file" style={styles.sunmit} to="/Feed">+อัพโหลดรูปภาพหลายรูปภาพ</button>
+                        </Link>
                     </div>
 
-                    <div style={{ width: '100%', marginTop: '5rem', border: "1p solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+                    <div style={{ width: '100%', marginTop: '2rem', border: "1p solid #eeeeee", margin: 'auto' }}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -29,11 +48,11 @@ function InsertProduct() {
                                 }}>
                                 ชื่อสินค้า<label style={{ color: 'red', fontSize: 4, fontWeight: 'normal' }}>*</label>
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <input type="text" name="name" placeholder="ชื่อสินค้า" style={styles.input} />
                         </div>
                     </div>
 
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
+                    <div style={styles.divBox}>
                         <div style={{ width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
                             <label
                                 style={{
@@ -50,19 +69,19 @@ function InsertProduct() {
                                         width: '94.5%',
                                         border: 'white',
                                         outline: 'none',
-                                        fontSize:14
+                                        fontSize: 14
                                     }}
-                                    rows={5}
+                                    rows={3}
                                     cols={5}
                                     placeholder="รายละเอียดสินค้า"
-                                    
+
                                 />
                             </div>
 
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -75,8 +94,9 @@ function InsertProduct() {
                             <input type="text" name="name" style={styles.input} />
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -86,11 +106,14 @@ function InsertProduct() {
                                 }}>
                                 ประเภท<label style={{ color: 'red', fontSize: 15, fontWeight: 'normal' }}>*</label>
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -100,11 +123,14 @@ function InsertProduct() {
                                 }}>
                                 ขนาด<label style={{ color: 'red', fontSize: 15, fontWeight: 'normal' }}>*</label>
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -114,11 +140,14 @@ function InsertProduct() {
                                 }}>
                                 แบรนด์
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -126,13 +155,16 @@ function InsertProduct() {
                                     fontWeight: 'normal',
                                     paddingLeft: '3%'
                                 }}>
-                               สไตล์
+                                สไตล์
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -140,13 +172,16 @@ function InsertProduct() {
                                     fontWeight: 'normal',
                                     paddingLeft: '3%'
                                 }}>
-                               สี
+                                สี
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -156,11 +191,14 @@ function InsertProduct() {
                                 }}>
                                 บริการขนส่ง<label style={{ color: 'red', fontSize: 15, fontWeight: 'normal' }}>*</label>
                             </label>
-                            <input type="text" name="name" style={styles.input} />
+                            <div style={{ backgroundColor: 'white', }}>
+                                <img src={next} alt="" height={15} />
+                            </div>
                         </div>
                     </div>
-                    <div style={{ width: '100%', marginTop: -0.5, border: "1px solid #eeeeee", margin: 'auto' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', margin: 'auto', marginTop: 5, marginBottom: 5 }}>
+
+                    <div style={styles.divBox}>
+                        <div style={styles.divInBox}>
                             <label
                                 style={{
                                     color: 'black',
@@ -174,7 +212,15 @@ function InsertProduct() {
                         </div>
                     </div>
 
+                    <div style={{ width: '30%', margin: 'auto', display: 'flex', justifyContent: 'space-between', paddingTop: '1rem' }}>
+                        <Link to="/InsertProduct" >
+                            <button type="file" style={styles.buttonSaveDraft} to="/Feed">บันทึกฉบับร่าง</button>
+                        </Link>
+                        <Link to="/InsertProduct">
+                            <button type="file" style={styles.buttonSave} to="/Feed">บันทึกสินค้า</button>
+                        </Link>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,8 +232,8 @@ function InsertProduct() {
 
 const styles = {
     input: {
-        width: '25%',
-        height: 30,
+        width: '20vh',
+        height: 25,
         borderColor: '#eeeeee',
         borderWidth: 0,
         backgroundColor: '#eeeeee',
@@ -195,19 +241,62 @@ const styles = {
         textAlign: 'left',
         marginLeft: 5,
         outline: 'none',
-        fontSize:12
+        fontSize: 12
     },
 
     sunmit: {
         borderColor: '#35bdb4',
         borderWidth: 0,
-        width: '100%',
-        height: 35,
+        maxWidth: '30vh',
+        height: 40,
         backgroundColor: '#35bdb4',
         borderRadius: 10,
         textAlign: 'center',
         outline: 'none',
         color: 'white'
+    },
+    buttonSave: {
+        borderColor: '#35bdb4',
+        borderWidth: 0,
+        maxWidth: '150px',
+        height: 40,
+        backgroundColor: '#35bdb4',
+        borderRadius: 10,
+        textAlign: 'center',
+        outline: 'none',
+        color: 'white',
+    },
+    buttonSaveDraft: {
+        borderColor: '#000000',
+        borderWidth: 1,
+        maxWidth: '150px',
+        height: 40,
+        backgroundColor: '#ffffff',
+        borderRadius: 10,
+        textAlign: 'center',
+        outline: 'none',
+        color: 'black'
+    },
+    boxImage: {
+        width: 120,
+        height: 130,
+        backgroundColor: '#eeeeee'
+    },
+
+    divBox: {
+        width: '100%',
+        marginTop: -0.5,
+        border: "1px solid #eeeeee",
+        margin: 'auto'
+    },
+
+    divInBox: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '100%',
+        margin: 'auto',
+        marginTop: 5,
+        marginBottom: 5
     }
 }
 export default InsertProduct

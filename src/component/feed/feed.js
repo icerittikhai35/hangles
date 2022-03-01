@@ -4,13 +4,16 @@ import HeaderFeed from './header-feed';
 import Navigation from '../../Navigation'
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import DataStore from '../../dataStore';
+import { Link } from 'react-router-dom';
 
 
 function Feed() {
     let boxStore =
         DataStore.map((item, e) => {
             return (
-                <img src={item.Image} alt="new" width={'100%'} style={{ marginBottom: '2%', }} />
+                <Link to="/DetailProduct">
+                    <img src={item.Image} alt="new" width={'100%'} style={{ marginBottom: '2%', }} />
+                </Link>
             )
         });
 

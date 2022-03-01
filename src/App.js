@@ -9,6 +9,7 @@ import Profile from './component/profile/profile';
 import Notifications from './component/notifications/notifications';
 import InsertProduct from './component/insert product/insert-product';
 import TypeProduct from './component/insert product/pages/typeProduct';
+import DetailProduct from './component/feed/detailProduct/detailProduct';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Notifications" component={Notifications} />
           <Route path="/InsertProduct" component={InsertProduct} />
           <Route path="/TypeProduct" component={TypeProduct} />
+          <Route path="/DetailProduct" component={DetailProduct} />
         </Switch>
       </BrowserRouter>
     </div>

@@ -7,14 +7,14 @@ import ProfilePic from '../../../img/profile-pic.jpeg'
 
 const HeaderdetailProduct = () => {
     return (
-        <div style={{ width: '100%' }}>
-            <nav className="navbar fixed-top " >
-                <div style={{ padding: '15px 20px', }}>
+        <div style={{ width: '100%' ,backgroundColor:'red',margin:'auto'}}>
+            <nav className="navbar" >
+                <div style={{ padding: '15px 20px' }}>
                     <Link to="/">
                         <img src={Back} alt="" width={20} />
                     </Link>
                 </div>
-                <div style={{ margin: 'auto', width: '80%', }}>
+                <div style={{ margin: 'auto',width:'70%'}}>
                     <div style={{ display: 'flex' }}>
                         <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 35, height: 35 }} style={{ marginTop: '1%', }} />
                         <div style={{ paddingLeft: '2%' }}>
@@ -29,12 +29,13 @@ const HeaderdetailProduct = () => {
                     </div>
                 </div>
                 <div style={{ padding: '15px 20px' }}>
-                    <img src={More} alt="" width={20} />
+                    <img src={More} alt="" width={15} />
                 </div>
             </nav>
 
         </div>
     )
 };
+
 
 export default HeaderdetailProduct;

@@ -10,16 +10,18 @@ import { Link } from 'react-router-dom';
 function Feed() {
     let boxStore =
         DataStore.map((item, e) => {
+            console.log(item.id);
             return (
                 <Link to="/DetailProduct">
                     <img src={item.Image} alt="new" width={'100%'} style={{ marginBottom: '2%', }} />
                 </Link>
             )
+
         });
 
 
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, minHeight: '100vh', paddingBottom: '5vh' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: '#eeeeee', paddingTop: 70, minHeight: '100vh', paddingBottom: '5vh' }}>
             <Navigation />
             <HeaderFeed />
             <div className='YourStyle'>
@@ -43,7 +45,9 @@ function Feed() {
             <div className='YourStyle'>
                 <div style={{ height: '4rem', paddingTop: 5 }}>
                     <div> <label style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >สไตล์ของคุณ</label></div>
-                    <div> <label className='font'>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
+                    <Link to="/DetailProduct">
+                        <div> <label className='font' style={{color:'#35bdb4'}}>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
+                    </Link>
                 </div>
 
                 <table style={{ margin: 'auto', }}>

@@ -90,7 +90,7 @@ const Store = (props) => {
 
         </div>
     )
-};
+}; 
 const styles = {
 
     container: {

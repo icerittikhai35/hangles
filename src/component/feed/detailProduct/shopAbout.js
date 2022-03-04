@@ -2,10 +2,38 @@ import React from 'react';
 import '../feed.css';
 import DataStore from '../../../dataStore';
 import { Link } from 'react-router-dom';
+import ProfilePic from '../../../img/profile-pic.jpeg';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
+import { styled } from '@mui/material/styles';
 
 
+const labels = {
+    0.5: 'Useless',
+    1: 'Useless+',
+    1.5: 'Poor',
+    2: 'Poor+',
+    2.5: 'Ok',
+    3: 'Ok+',
+    3.5: 'Good',
+    4: 'Good+',
+    4.5: 'Excellent',
+    5: 'Excellent+',
+};
 
-function Feed() {
+const StyledRating = styled(Rating)({
+    '& .MuiRating-iconFilled': {
+        color: '#35bdb4',
+    },
+    '& .MuiRating-iconHover': {
+        color: '#35bdb4',
+    },
+});
+
+function Feed(props) {
+    const valueStar = 4.5;
     let boxStore =
         DataStore.map((item, e) => {
             console.log(item.id);
@@ -21,22 +49,81 @@ function Feed() {
     return (
         <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: '#eeeeee', minHeight: '100vh', paddingBottom: '5vh', boxShadow: "0 0 3px 2px #eeeeee", borderTopRadius: 50 }}>
 
-
             <div className='YourStyle'>
-                <div style={{ height: '4rem', paddingTop: 5 }}>
+                <div style={{ height: '40px', paddingTop: 0 }}>
                     <div>
-                        <label style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >ข้อมูลเพิ่มเติมเกี่ยวกับผู้ขาย</label>
+                        <label style={{ paddingLeft: '4%', fontWeight: 'bold', fontSize: 14 }} >ข้อมูลเพิ่มเติมเกี่ยวกับผู้ขาย</label>
                     </div>
-                    <div>
-                        <label className='font' style={{ color: '#35bdb4' }}>ส่งต่อเสื้อผ้าสภาพดี</label>
-                    </div>
+
                 </div>
-                <div style={{ height: '4rem', paddingTop: 5 }}>
+                <div style={{ height: '180px', paddingTop: 0 }}>
                     <div>
-                        <label style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >ข้อมูลเพิ่มเติมเกี่ยวกับผู้ขาย</label>
+                        <div style={{ border: 10 }}>
+                            <div style={{ width: '90%', margin: 'auto' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', }}>
+                                    <div style={{ display: 'flex' }}>
+                                        <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 50, height: 50 }} />
+                                        <div style={{ paddingLeft: '1rem', textAlign: 'left' }}>
+                                            <div>
+                                                <a style={styles.font}>Ice Rittikhai</a>
+                                            </div>
+                                            <div>
+                                                <a style={styles.fontDeteil}>@icerittikhai</a>
+                                            </div>
+                                            <div>
+                                                <Box
+                                                    sx={{
+                                                        width: 50,
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                    }}
+                                                >
+
+                                                    <StyledRating
+                                                        name="customized-color"
+                                                        value={valueStar}
+                                                        precision={0.5}
+                                                        icon={<StarIcon fontSize="inherit" />}
+                                                        emptyIcon={<StarIcon fontSize="inherit" />}
+                                                        readOnly
+                                                        size="small"
+                                                    />
+                                                    {/* <Box sx={{ ml: 2 }}>{labels[valueStar]}</Box> */}
+                                                </Box>
+                                                <a style={styles.fontDeteil}>(0))</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
                     </div>
-                    <div>
-                        <label className='font' style={{ color: '#35bdb4' }}>ส่งต่อเสื้อผ้าสภาพดี</label>
+                    <div style={{ height: '40px', paddingTop: 0 }}>
+                        <div style={{ width: '90%', margin: 'auto' }}>
+                            <a style={styles.fontDeteil}>Used like new 🎀 | please feel free to contact for more details and photos ka 💗</a>
+                        </div>
+                    </div>
+                    <div style={{ height: '40px', paddingTop: 0 }}>
+                        <div style={{ width: '90%', margin: 'auto' }}>
+                            <a style={styles.fontDeteil}>แท็ก
+                                #adamsexyeve
+                                #blue
+                                #beachvibe
+                                #jumpsuit</a>
+                        </div>
+                    </div>
+                    <div style={{ height: '40px', paddingTop: 0 }}>
+                        <div style={{ width: '90%', margin: 'auto' }}>
+                            <a style={styles.font}>บางทีรายการ</a>
+                        </div>
                     </div>
                 </div>
 
@@ -59,5 +146,52 @@ function Feed() {
         </div>
     )
 }
+const styles = {
 
+    container: {
+        width: '80%',
+        margin: 'auto',
+        backgroundColor: 'white',
+        paddingTop: 60,
+        height: '10%',
+        backgroundColor: 'red'
+    },
+
+    boxCard: {
+        boxShadow: "0 0 3px 2px #eeeeee", /* the shadow */
+        width: '100%',
+        height: 30,
+        margin: 'auto',
+        backgroundColor: '#fbfbfb',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    well: {
+        width: '100%',
+        height: 20,
+        margin: 'auto',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    font: {
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+    fontDeteil: {
+        fontSize: 12,
+        fontWeight: 'normal'
+
+    },
+    Imgprofile: {
+        borderRadius: 50,
+    }
+
+};
 export default Feed

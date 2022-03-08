@@ -18,27 +18,36 @@ function Feed() {
             )
 
         });
+    let popular =
+        DataStore.map((item, e) => {
+            console.log(item.id);
+            return (
+                <Link to="/DetailProduct" >
+                    <img src={item.Image} alt="new" width={'200px'} style={{ marginBottom: '2%', marginRight: 4 }} />
+                </Link>
+            )
+
+        });
+
+
+
 
 
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: '#eeeeee', paddingTop: 70, minHeight: '100vh', paddingBottom: '5vh' }}>
+        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: '#eeeeee', paddingTop: 60, minHeight: '100vh', paddingBottom: '5vh' }}>
             <Navigation />
             <HeaderFeed />
             <div className='YourStyle'>
                 <div >
                     <div style={{ borderColor: 'white', display: 'flex', justifyContent: 'space-between', height: 30 }}>
-                        <label style={{ fontWeight: 'bold', fontSize: 12, paddingLeft: '3%' }}>ยอดนิยม</label>
-                        <label style={{ fontWeight: 'bold', fontSize: 12, paddingRight: '3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon /></label>
+                        <label style={{ fontWeight: 'bold', fontSize: 14, paddingLeft: '3%' }}>ยอดนิยม</label>
+                        <label style={{ fontWeight: 'normal', fontSize: 12, paddingRight: '3%' }}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon width={20} /></label>
                     </div>
 
                     <div class="scrollmenu">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmjlGT9OdwsXZQ9SWR_EWVoMoggpqVBwzlgA&usqp=CAU" alt="new" width={'20%'} />
+                        <div>
+                            {popular}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -46,7 +55,7 @@ function Feed() {
                 <div style={{ height: '4rem', paddingTop: 5 }}>
                     <div> <label style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 14 }} >สไตล์ของคุณ</label></div>
                     <Link to="/DetailProduct">
-                        <div> <label className='font' style={{color:'#35bdb4'}}>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
+                        <div> <label className='font' style={{ color: '#35bdb4' }}>อัพเดทขนาดและสไตล์ของคุณที่นี่</label></div>
                     </Link>
                 </div>
 

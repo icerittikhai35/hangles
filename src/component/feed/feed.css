@@ -5,7 +5,7 @@
     padding-top: 70;
 }
 
- 
+
 .YourStyle {
     flex-direction: column;
     background-color: white;
@@ -13,12 +13,18 @@
     border: 10rem;
     border-top: 10px;
 }
-.font{
+
+.font {
     font-weight: bold;
     padding-left: 2%;
     font-size: 12px;
+
 }
 
+.bar {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
 
 
 

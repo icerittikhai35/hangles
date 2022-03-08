@@ -10,18 +10,18 @@ import StarIcon from '@mui/icons-material/Star';
 import { styled } from '@mui/material/styles';
 
 
-const labels = {
-    0.5: 'Useless',
-    1: 'Useless+',
-    1.5: 'Poor',
-    2: 'Poor+',
-    2.5: 'Ok',
-    3: 'Ok+',
-    3.5: 'Good',
-    4: 'Good+',
-    4.5: 'Excellent',
-    5: 'Excellent+',
-};
+// const labels = {
+//     0.5: 'Useless',
+//     1: 'Useless+',
+//     1.5: 'Poor',
+//     2: 'Poor+',
+//     2.5: 'Ok',
+//     3: 'Ok+',
+//     3.5: 'Good',
+//     4: 'Good+',
+//     4.5: 'Excellent',
+//     5: 'Excellent+',
+// };
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
@@ -56,7 +56,7 @@ function Feed(props) {
                     </div>
 
                 </div>
-                <div style={{ height: '180px', paddingTop: 0 }}>
+                <div style={{ height: '180px', paddingTop: 10 }}>
                     <div>
                         <div style={{ border: 10 }}>
                             <div style={{ width: '90%', margin: 'auto' }}>
@@ -65,10 +65,10 @@ function Feed(props) {
                                         <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 50, height: 50 }} />
                                         <div style={{ paddingLeft: '1rem', textAlign: 'left' }}>
                                             <div>
-                                                <a style={styles.font}>Ice Rittikhai</a>
+                                                <label style={styles.font}>Ice Rittikhai</label>
                                             </div>
                                             <div>
-                                                <a style={styles.fontDeteil}>@icerittikhai</a>
+                                                <label style={styles.fontDeteil}>@icerittikhai</label>
                                             </div>
                                             <div>
                                                 <Box
@@ -90,7 +90,7 @@ function Feed(props) {
                                                     />
                                                     {/* <Box sx={{ ml: 2 }}>{labels[valueStar]}</Box> */}
                                                 </Box>
-                                                <a style={styles.fontDeteil}>(0))</a>
+                                                <label style={styles.fontDeteil}>(0)</label>
                                             </div>
 
                                         </div>
@@ -108,21 +108,21 @@ function Feed(props) {
                     </div>
                     <div style={{ height: '40px', paddingTop: 0 }}>
                         <div style={{ width: '90%', margin: 'auto' }}>
-                            <a style={styles.fontDeteil}>Used like new 🎀 | please feel free to contact for more details and photos ka 💗</a>
+                            <label style={styles.fontDeteil}>Used like new 🎀 | please feel free to contact for more details and photos ka 💗</label>
                         </div>
                     </div>
                     <div style={{ height: '40px', paddingTop: 0 }}>
                         <div style={{ width: '90%', margin: 'auto' }}>
-                            <a style={styles.fontDeteil}>แท็ก
+                            <label style={styles.fontDeteil}>แท็ก
                                 #adamsexyeve
                                 #blue
                                 #beachvibe
-                                #jumpsuit</a>
+                                #jumpsuit</label>
                         </div>
                     </div>
                     <div style={{ height: '40px', paddingTop: 0 }}>
                         <div style={{ width: '90%', margin: 'auto' }}>
-                            <a style={styles.font}>บางทีรายการ</a>
+                            <label style={styles.font}>บางทีรายการ</label>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,6 @@ const styles = {
         backgroundColor: 'white',
         paddingTop: 60,
         height: '10%',
-        backgroundColor: 'red'
     },
 
     boxCard: {
@@ -166,7 +165,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
     well: {
@@ -176,7 +174,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
 

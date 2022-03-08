@@ -6,18 +6,18 @@ import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 import { styled } from '@mui/material/styles';
 
-const labels = {
-    0.5: 'Useless',
-    1: 'Useless+',
-    1.5: 'Poor',
-    2: 'Poor+',
-    2.5: 'Ok',
-    3: 'Ok+',
-    3.5: 'Good',
-    4: 'Good+',
-    4.5: 'Excellent',
-    5: 'Excellent+',
-};
+// const labels = {
+//     0.5: 'Useless',
+//     1: 'Useless+',
+//     1.5: 'Poor',
+//     2: 'Poor+',
+//     2.5: 'Ok',
+//     3: 'Ok+',
+//     3.5: 'Good',
+//     4: 'Good+',
+//     4.5: 'Excellent',
+//     5: 'Excellent+',
+// };
 
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
@@ -77,10 +77,10 @@ const Store = (props) => {
                     <div >
                         <div >
                             <div>
-                                <a style={styles.font}>Ice Rittikhai</a>
+                                <label style={styles.font}>Ice Rittikhai</label>
                             </div>
                             <div>
-                                <a style={styles.fontDeteil}>@icerittikhai</a>
+                                <label style={styles.fontDeteil}>@icerittikhai</label>
                             </div>
 
                         </div>
@@ -110,7 +110,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
     well: {
@@ -120,7 +119,6 @@ const styles = {
         borderRadius: 15,
         justifyContent: 'center',
         display: 'flex',
-        justifyContent: 'center',
         alignItems: 'center',
     },
 

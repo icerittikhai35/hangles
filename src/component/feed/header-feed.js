@@ -10,7 +10,7 @@ const HeaderFeed = (props) => {
   return (
     <div style={{ width: '100%' }}>
       <nav className="navbar fixed-top " role="HeaderFeed" >
-        <div style={{ padding: '15px 20px', }}>
+        <div style={{ padding: '10px 20px', }}>
           <Link to="/Notifications">
             <img src={Notification} alt="" width={20} />
           </Link>

@@ -10,6 +10,7 @@ import Notifications from './component/notifications/notifications';
 import InsertProduct from './component/insert product/insert-product';
 import TypeProduct from './component/insert product/pages/typeProduct';
 import DetailProduct from './component/feed/detailProduct/detailProduct';
+import Wallet from './component/wallet/wallet';
 
 
 
@@ -27,6 +28,8 @@ function App() {
           <Route path="/InsertProduct" component={InsertProduct} />
           <Route path="/TypeProduct" component={TypeProduct} />
           <Route path="/DetailProduct" component={DetailProduct} />
+          <Route path="/Wallet" component={Wallet} />
+
         </Switch>
       </BrowserRouter>
     </div>

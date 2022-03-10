@@ -13,7 +13,7 @@ const HeaderWallet = (props) => {
                     </Link>
 
                 </div>
-                <div style={{ margin: 'auto', width: '8rem', }}>
+                <div style={{ margin: 'auto', width: '15vh', }}>
                     <lable style={{ paddingLeft: '2%', fontWeight: 'bold', fontSize: 16 }} >กระเป๋า</lable>
                 </div>
 

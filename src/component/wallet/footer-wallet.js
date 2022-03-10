@@ -43,14 +43,15 @@ const FooterWallet = (props) => {
                     <div style={{ width: '100%', margin: 'auto', height: '40px', boxShadow: '0px 0px 0px 1px #d9d9d9 ' }}>
                         <div style={{ width: '97%', display: 'flex', margin: 'auto', justifyContent: 'space-between', height: '30px', }}>
                             <div style={{ marginTop: 8 }}>
-                                <label style={{ color: 'black', fontSize: 14, fontWeight: 'bold', paddingLeft: 10 }}> ผลรวมทั้งมหด  </label>
+                                <label style={{ color: 'black', fontSize: 14, fontWeight: 'bold', paddingLeft: 10 }}> ผลรวม  </label>
                             </div>
                             <div style={{ marginTop: 8 }}>
                                 <label style={{ color: 'black', fontSize: 14 }}>0.00 ฿</label>
                             </div>
                         </div>
                     </div>
-                    <div style={{ width: '8%', margin: 'auto', height: '40px', paddingTop: 20 }}>
+
+                    <div style={{ margin: 'auto', width: '20vh', paddingTop: 20, paddingBottom: 20,}}>
                         <button type="submit" style={styles.sunmit} to="/">ชำระเงิน</button>
                     </div>
                 </Link>
@@ -64,14 +65,15 @@ const styles = {
     sunmit: {
         borderColor: '#35bdb4',
         borderWidth: 0,
-        width: '100%',
+        minWidth: '20vh',
         height: '40px',
         backgroundColor: '#35bdb4',
         borderRadius: 10,
         textAlign: 'center',
         outline: 'none',
         color: 'white'
-    }
+    },
+
 }
 
 export default FooterWallet;

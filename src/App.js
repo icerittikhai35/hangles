@@ -11,6 +11,7 @@ import InsertProduct from './component/insert product/insert-product';
 import TypeProduct from './component/insert product/pages/typeProduct';
 import DetailProduct from './component/feed/detailProduct/detailProduct';
 import Wallet from './component/wallet/wallet';
+import Setting from './component/profile/setting/setting'
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/TypeProduct" component={TypeProduct} />
           <Route path="/DetailProduct" component={DetailProduct} />
           <Route path="/Wallet" component={Wallet} />
+          <Route path="/Setting" component={Setting} />
 
         </Switch>
       </BrowserRouter>

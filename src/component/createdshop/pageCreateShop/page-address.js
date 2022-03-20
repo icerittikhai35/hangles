@@ -8,14 +8,14 @@ import TextField from '@material-ui/core/TextField';
 function PageAdressShop() {
     return (
 
-        <div style={{ maxWidth: '760px', margin: 'auto',  minHeight: '10vh', alignItems: 'stretch', backgroundColor: 'white', display: 'flex', }}>
-            <div style={{ width: '100%', margin: 'auto', height: '100%', display: 'flex', }}>
-                <div style={{ padding: '15px 20px', position: 'absolute' }}>
+        <div style={styles.container}>
+            <div style={styles.boxContainer}>
+                <div style={styles.boxBack}>
                     <Link to="/">
                         <img src={Cancel} alt="" width={25} />
                     </Link>
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '100%', paddingTop: '2rem' , }}>
+                <div style={styles.boxAddress}>
                     <div style={{ width: 100, margin: 'auto', paddingTop: 0 }}>
                         <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 100, height: 100, backgroundColor: '#eeeeee' }} />
                     </div>
@@ -26,7 +26,7 @@ function PageAdressShop() {
                         <label style={{ color: 'black', fontSize: 12, fontWeight: 'normal' }}>โปรดระบุตำแหน่งและสถานที่ให้กับผู้ใช้</label>
                     </div>
 
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,}}>
+                    <div style={styles.boxDetail}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -38,7 +38,7 @@ function PageAdressShop() {
                             }}
                         />
                     </div>
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,}}>
+                    <div style={styles.boxDetail}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -50,7 +50,7 @@ function PageAdressShop() {
                             }}
                         />
                     </div>
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,}}>
+                    <div style={styles.boxDetail}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -62,7 +62,7 @@ function PageAdressShop() {
                             }}
                         />
                     </div>
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,}}>
+                    <div style={styles.boxDetail}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -74,7 +74,7 @@ function PageAdressShop() {
                             }}
                         />
                     </div>
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,}}>
+                    <div style={styles.boxDetail}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -86,7 +86,7 @@ function PageAdressShop() {
                             }}
                         />
                     </div>
-                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15,marginBottom:30}}>
+                    <div style={{ width: '90%', margin: 'auto', paddingTop: 15, marginBottom: 30 }}>
                         <TextField
                             id="standard-full-width"
                             style={{ margin: 0, textAlign: 'center' }}
@@ -106,5 +106,37 @@ function PageAdressShop() {
     )
 }
 
+
+const styles = {
+    container: {
+        maxWidth: '760px',
+        margin: 'auto',
+        minHeight: '10vh',
+        alignItems: 'stretch',
+        backgroundColor: 'white',
+        display: 'flex',
+    },
+    boxContainer: {
+        width: '100%',
+        margin: 'auto',
+        height: '100%',
+        display: 'flex',
+    },
+    boxBack: {
+        padding: '15px 20px',
+        position: 'absolute'
+    },
+    boxAddress: {
+        width: '100%',
+        margin: 'auto',
+        height: '100%',
+        paddingTop: '2rem',
+    },
+    boxDetail: {
+        width: '90%',
+        margin: 'auto',
+        paddingTop: 15,
+    },
+}
 
 export default PageAdressShop

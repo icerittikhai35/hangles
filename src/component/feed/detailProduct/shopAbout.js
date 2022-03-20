@@ -10,19 +10,6 @@ import StarIcon from '@mui/icons-material/Star';
 import { styled } from '@mui/material/styles';
 
 
-// const labels = {
-//     0.5: 'Useless',
-//     1: 'Useless+',
-//     1.5: 'Poor',
-//     2: 'Poor+',
-//     2.5: 'Ok',
-//     3: 'Ok+',
-//     3.5: 'Good',
-//     4: 'Good+',
-//     4.5: 'Excellent',
-//     5: 'Excellent+',
-// };
-
 const StyledRating = styled(Rating)({
     '& .MuiRating-iconFilled': {
         color: '#35bdb4',
@@ -47,7 +34,7 @@ function Feed(props) {
 
 
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: '#eeeeee', minHeight: '100vh', paddingBottom: '5vh', boxShadow: "0 0 3px 2px #eeeeee", borderTopRadius: 50 }}>
+        <div style={styles.container}>
 
             <div className='YourStyle'>
                 <div style={{ height: '40px', paddingTop: 0 }}>
@@ -56,6 +43,7 @@ function Feed(props) {
                     </div>
 
                 </div>
+
                 <div style={{ height: '180px', paddingTop: 10 }}>
                     <div>
                         <div style={{ border: 10 }}>
@@ -96,16 +84,13 @@ function Feed(props) {
                                         </div>
 
                                     </div>
-
-
-
                                 </div>
-
-
                             </div>
                         </div>
 
                     </div>
+
+                    
                     <div style={{ height: '40px', paddingTop: 0 }}>
                         <div style={{ width: '90%', margin: 'auto' }}>
                             <label style={styles.fontDeteil}>Used like new 🎀 | please feel free to contact for more details and photos ka 💗</label>
@@ -149,11 +134,13 @@ function Feed(props) {
 const styles = {
 
     container: {
-        width: '80%',
+        maxWidth: '760px',
         margin: 'auto',
-        backgroundColor: 'white',
-        paddingTop: 60,
-        height: '10%',
+        backgroundColor: '#eeeeee',
+        minHeight: '100vh',
+        paddingBottom: '5vh',
+        boxShadow: "0 0 3px 2px #eeeeee",
+        borderTopRadius: 50
     },
 
     boxCard: {

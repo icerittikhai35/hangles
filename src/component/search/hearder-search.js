@@ -1,8 +1,6 @@
 import React from 'react';
-import Logo from '../../img/logo.svg'
-import Notification from '../../img/notification.png'
 import Shopbag from '../../img/shop-bag.png'
-
+import { Link } from "react-router-dom";
 
 
 const HeaderSearch = (props) => {
@@ -12,8 +10,10 @@ const HeaderSearch = (props) => {
                 <div style={{ paddingLeft: '3%', width: '90%' }}>
                     <input type="text" class="form-control" id="inputPassword" placeholder="ค้นหา" ></input>
                 </div>
-                <div style={{  paddingRight: '3%' }}>
-                    <img src={Shopbag} alt="" width={20} />
+                <div style={{ paddingRight: '3%' }}>
+                    <Link to="/Wallet">
+                        <img src={Shopbag} alt="" width={20} />
+                    </Link>
                 </div>
             </nav>
 

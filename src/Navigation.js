@@ -31,7 +31,7 @@ const tabs = [{
 const Navigation = (props) => {
   return (
     <div >
-      <nav className="navbar fixed-bottom navbar-light  bottom-tab-nav " role="navigation" style={{ backgroundColor: 'white', height: 62, width: '100%', margin: 'auto' }}>
+      <nav  className="navbar fixed-bottom navbar-light  bottom-tab-nav "  style={{ backgroundColor: 'white', height: 62, width: '100%', margin: 'auto' }}>
         <Nav className="w-100">
           <div className=" d-flex flex-row justify-content-around w-100">
             {

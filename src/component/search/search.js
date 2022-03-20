@@ -44,8 +44,8 @@ function Search() {
                         <label style={{ fontWeight: 'bold', fontSize: 12, }}>ผู้ชาย</label>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                    <img src="https://inwfile.com/s-a/hlheok.jpg" alt="new" width={'16%'} style={{ marginBottom: '2%',marginRight:6 }} />
-                    <img src="https://inwfile.com/s-a/uvt8pi.jpg" alt="new" width={'16%'} style={{ marginBottom: '2%', }} />
+                        <img src="https://inwfile.com/s-a/hlheok.jpg" alt="new" width={'16%'} style={{ marginBottom: '2%', marginRight: 6 }} />
+                        <img src="https://inwfile.com/s-a/uvt8pi.jpg" alt="new" width={'16%'} style={{ marginBottom: '2%', }} />
 
                     </div>
                 </div>
@@ -54,5 +54,7 @@ function Search() {
         </div >
     )
 }
+
+
 
 export default Search

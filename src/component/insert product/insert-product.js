@@ -212,13 +212,19 @@ function InsertProduct() {
                         </div>
                     </div>
 
-                    <div style={{ width: '30%', margin: 'auto', display: 'flex', justifyContent: 'space-between', paddingTop: '1rem' }}>
-                        <Link to="/InsertProduct" >
-                            <button type="file" style={styles.buttonSaveDraft} to="/Feed">บันทึกฉบับร่าง</button>
-                        </Link>
-                        <Link to="/InsertProduct">
-                            <button type="file" style={styles.buttonSave} to="/Feed">บันทึกสินค้า</button>
-                        </Link>
+                    <div style={{ width: '10%', margin: 'auto', display: 'flex', justifyContent: 'space-around', paddingTop: '1rem',paddingBottom:10 }}>
+                        <div style={{ paddingRight: 10 }}>
+                            <Link to="/InsertProduct" >
+                                <button type="file" style={styles.buttonSaveDraft} to="/Feed">บันทึกฉบับร่าง</button>
+                            </Link>
+                        </div>
+                        <div style={{ paddingLeft: 10 }}>
+                            <Link to="/InsertProduct">
+                                <button type="file" style={styles.buttonSave} to="/Feed">บันทึกสินค้า</button>
+                            </Link>
+                        </div>
+
+
 
                     </div>
                 </div>
@@ -258,7 +264,7 @@ const styles = {
     buttonSave: {
         borderColor: '#35bdb4',
         borderWidth: 0,
-        maxWidth: '150px',
+        width: '150px',
         height: 40,
         backgroundColor: '#35bdb4',
         borderRadius: 10,
@@ -269,7 +275,7 @@ const styles = {
     buttonSaveDraft: {
         borderColor: '#000000',
         borderWidth: 1,
-        maxWidth: '150px',
+        width: '150px',
         height: 40,
         backgroundColor: '#ffffff',
         borderRadius: 10,

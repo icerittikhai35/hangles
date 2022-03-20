@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Bookmark from '../../../img/bookmark.png'
 import Heart from '../../../img/heart.png'
 import Comment from '../../../img/comment.png'
@@ -6,24 +6,29 @@ import CommentSP from '../../../img/commentSP.png'
 import Navigation from '../../../Navigation'
 import Back from '../../../img/back.png'
 import More from '../../../img/more.png'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import ProfilePic from '../../../img/profile-pic.jpeg'
 import ShopAbout from './shopAbout'
 
-function DetailProduct(props) {
+function DetailProduct() {
+    const { testvalue } = useParams();
+    console.log(testvalue);
+
 
     return (
 
-        <div style={{ maxWidth: '760px', margin: 'auto', height: '200%', backgroundColor: '#ffffff', }}>
-            <div style={{ width: '100%', }}>
-                <nav style={{ display: 'flex', height: '6%' }}>
+        <div style={styles.container}>
+            <Navigation />
+
+            <div style={styles.divHeader}>
+                <nav style={styles.navHeader}>
                     <div style={{ padding: '15px 20px' }}>
                         <Link to="/">
                             <img src={Back} alt="" width={20} />
                         </Link>
                     </div>
-                    <div style={{ margin: 'auto', width: '70%' }}>
+                    <div style={{ margin: 'auto', width: '100%' }}>
                         <div style={{ display: 'flex' }}>
                             <Avatar alt="Cindy Baker" src={ProfilePic} sx={{ width: 35, height: 35 }} style={{ marginTop: '1%', }} />
                             <div style={{ paddingLeft: '2%' }}>
@@ -43,12 +48,15 @@ function DetailProduct(props) {
                 </nav>
 
             </div>
-            <Navigation />
-            <div style={{ width: '100%', margin: 'auto', marginBottom: 70 }}>
-                <div style={{ width: '100%', margin: 'auto', backgroundColor: 'red' }}>
+
+
+
+            <div style={styles.containerDetail}>
+                <div style={styles.divImgProduct}>
                     <img src={"https://tubtimbeautyplus.com/wp-content/uploads/2020/06/030.jpg"} alt="" width={'100%'} height={'100%'} />
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '5vh', display: 'flex', border: 'red', border: '1px solid #eee' }}>
+
+                <div style={styles.divPriceProduct}>
                     <div style={{ width: '42%', margin: 'auto' }}>
                         <label style={{ fontWeight: 'bold', fontSize: 14 }} >ราคา 100. ฿</label>
                     </div>
@@ -56,7 +64,8 @@ function DetailProduct(props) {
                         <button type="submit" style={styles.sunmit} >เพิ่มในกระเป๋า</button>
                     </div>
                 </div>
-                <div style={{ width: '100%', margin: 'auto', height: '5vh', display: 'flex', paddingTop: 5, }}>
+
+                <div style={styles.divDetailProduct}>
                     <div style={{ width: '42%', margin: 'auto', }}>
                         <div style={{ width: '40%', display: 'flex', justifyContent: 'space-between', }}>
                             <div style={{ width: '40%', height: 28, backgroundColor: '#e2e2e2', borderRadius: 10, paddingLeft: 10 }}>
@@ -69,9 +78,7 @@ function DetailProduct(props) {
                             <div >
                                 <img src={Comment} alt="" width={20} />
                             </div>
-
                         </div>
-
                     </div>
 
                     <div style={{ width: '42%', margin: 'auto', justifyContent: 'right', display: 'flex' }}>
@@ -79,6 +86,7 @@ function DetailProduct(props) {
                     </div>
 
                 </div>
+
                 <div >
                     <div style={{ width: '90%', margin: 'auto' }}>
                         <label style={{ fontWeight: 'bold', fontSize: 10 }} >0 อื่นๆที่ชอบ</label>
@@ -108,11 +116,14 @@ function DetailProduct(props) {
                 </div>
                 <div style={{ display: 'flex', width: '100%', margin: 'auto', justifyContent: 'space-between' }}>
                     <ShopAbout />
-
                 </div>
 
 
             </div>
+
+
+
+
         </div>
 
 
@@ -121,6 +132,43 @@ function DetailProduct(props) {
 
 
 const styles = {
+    container: {
+        maxWidth: '760px',
+        margin: 'auto',
+        height: '100%',
+        backgroundColor: '#ffffff',
+    },
+    divHeader: {
+        width: '100%',
+    },
+    navHeader: {
+        display: 'flex',
+        height: '6%'
+    },
+    containerDetail: {
+        width: '100%',
+        margin: 'auto',
+  
+    },
+    divImgProduct: {
+        width: '100%',
+        margin: 'auto',
+    },
+    divPriceProduct: {
+        width: '100%',
+        margin: 'auto',
+        height: '5vh',
+        display: 'flex',
+        border: '1px solid #eee'
+    },
+    divDetailProduct: {
+        width: '100%',
+        margin: 'auto',
+        height: '5vh',
+        display: 'flex',
+        paddingTop: 5,
+    },
+
     sunmit: {
         borderColor: '#35bdb4',
         borderWidth: 0,

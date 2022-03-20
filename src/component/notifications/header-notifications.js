@@ -8,7 +8,7 @@ const HeaderNotifications = (props) => {
         <div >
             <nav className="navbar fixed-top  " role="HeaderFeed" style={{ borderColor: '#EBEBEB', display: 'flex', justifyContent: 'space-between' }}>
                 <div style={{ paddingLeft: '3%', width: '10%', display: 'flex', justifyContent: 'space-between' }}>
-                    <Link to="/Feed">
+                    <Link to="/">
                         <img src={Back} alt="" width={20} />
                     </Link>
 

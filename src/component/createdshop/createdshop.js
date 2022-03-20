@@ -13,11 +13,15 @@ import PageLogistic from '../createdshop/pageCreateShop/page-logistic';
 import PagePhone from '../createdshop/pageCreateShop/page-phone';
 import PageOTP from '../createdshop/pageCreateShop/page-OTP';
 
+const useStyles = makeStyles({
+    dot: {
+        backgroundColor: "#eeeeee"
+    },
+    dotActive: {
+        backgroundColor: "#35bdb4;"
+    }
+});
 
-const useStyles = makeStyles(theme => ({
-}));
-
-//สำหรับใส่ชื่อ Step
 
 export default function Createdshop() {
     const classes = useStyles();
@@ -32,9 +36,9 @@ export default function Createdshop() {
         setActiveStep(prevActiveStep => prevActiveStep - 1);
     };
 
- 
 
-    //สำหรับ get Step ตาม index
+
+    //สำหรับ get Step ตาม index 
     function getStepContent(stepIndex) {
         switch (stepIndex) {
             case 0:
@@ -59,9 +63,9 @@ export default function Createdshop() {
     }
     console.log(getStepContent)
     return (
-        <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', minHeight: '100vh' }}>
+        <div style={styles.container}>
             <div>
-                <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', height: '100%' }}>
+                <div style={styles.stepStyle}>
                     <div>{getStepContent(activeStep)}</div>
                 </div>
             </div>
@@ -71,7 +75,11 @@ export default function Createdshop() {
                 steps={8}
                 position="static"
                 activeStep={activeStep}
-                className={classes.root}
+                classes={{
+                    root: classes.root,
+                    dot: classes.dot,
+                    dotActive: classes.dotActive,
+                }}
                 style={{ backgroundColor: '#ffffff' }}
                 nextButton={
                     <Button size="small" onClick={handleNext} disabled={activeStep === 7}>
@@ -91,3 +99,19 @@ export default function Createdshop() {
     );
 }
 
+
+const styles = {
+    container: {
+        maxWidth: '760px',
+        margin: 'auto',
+        backgroundColor: 'white',
+        minHeight: '100vh'
+    },
+    stepStyle: {
+        maxWidth: '760px',
+        margin: 'auto',
+        backgroundColor: 'white',
+        height: '100%'
+    },
+
+}

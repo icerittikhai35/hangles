@@ -90,15 +90,11 @@ const Store = (props) => {
 
         </div>
     )
-}; 
+};
 const styles = {
 
     container: {
-        width: '48rem',
-        margin: 'auto',
-        backgroundColor: 'white',
-        paddingTop: 60,
-        height: '100%'
+        boxShadow: "0 0 3px 2px #eeeeee"
     },
 
     boxCard: {

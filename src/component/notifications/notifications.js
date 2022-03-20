@@ -5,8 +5,8 @@ function Notifications() {
     return (
         <>
             <HeaderNotifications />
-            <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, height: '100%' }}>
-                <a>TTTT</a>
+            <div style={{ maxWidth: '760px', margin: 'auto', backgroundColor: 'white', paddingTop: 70, height: '100vh' }}>
+              
             </div>
         </>
 

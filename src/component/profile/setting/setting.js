@@ -4,16 +4,19 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import HeaderChat from './header-chat';
-import Navigation from '../../Navigation'
+import Buyer from './buyer';
+import Vendor from './vendor';
+import Navigation from '../../../Navigation';
+import HeaderSetting from './header-setting'
 
-function Chat(props) {
+
+function Setting(props) {
     const { children, value, index, ...other } = props;
 
     return (
         <div
             hidden={value !== index}
-            id={`Chat-${index}`}
+            id={`Setting-${index}`}
             aria-labelledby={`tab-${index}`}
             {...other}
         >
@@ -26,7 +29,7 @@ function Chat(props) {
     );
 }
 
-Chat.propTypes = {
+Setting.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
@@ -35,7 +38,7 @@ Chat.propTypes = {
 function allProps(index) {
     return {
         id: `tab-${index}`,
-        'aria-controls': `Chat-${index}`,
+        'aria-controls': `Setting-${index}`,
     };
 }
 
@@ -46,12 +49,13 @@ export default function BasicTabs() {
         setValue(newValue);
     };
 
+
     return (
         <div style={styles.container}>
             <Navigation />
-            <HeaderChat />
-            <Box sx={{ width: '100%' }}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <HeaderSetting />
+            <Box sx={{ width: '100%', }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'white' }}>
                     <Tabs value={value} onChange={handleChange}
                         aria-label="basic tabs example"
                         TabIndicatorProps={{ style: { background: '#35bdb4' } }}
@@ -62,24 +66,66 @@ export default function BasicTabs() {
                         <Tab label="ผู้ขาย" {...allProps(1)} />
                     </Tabs>
                 </Box>
-                <Chat value={value} index={0}>
-                    <input type="text" class="form-control" id="inputPassword" placeholder="ค้นหา" ></input>
-                </Chat>
-                <Chat value={value} index={1}>
-                    <input type="text" class="form-control" id="inputPassword" placeholder="ค้นหา" ></input>
-                </Chat>
+                {/* หน้าร้านค้า แก้ไขที่ store.js */}
+                <Setting value={value} index={0}>
+                    <Buyer />
+                </Setting>
+
+
+                {/* หน้าร้านค้า แก้ไขที่ review.js */}
+                <Setting value={value} index={1}>
+                    <Vendor />
+                </Setting>
 
             </Box>
-        </div>
-    );
-}
 
+
+        </div >
+    );
+
+}
 const styles = {
+
     container: {
         maxWidth: '760px',
         margin: 'auto',
         backgroundColor: 'white',
-        paddingTop: 70,
+        paddingTop: 145,
         minHeight: '100vh'
     },
-}
+
+    boxCard: {
+        boxShadow: "0 0 3px 2px #eeeeee", /* the shadow */
+        width: '100%',
+        height: 100,
+        margin: 'auto',
+        backgroundColor: '#fbfbfb',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
+    },
+    well: {
+        width: '100%',
+        height: 100,
+        margin: 'auto',
+        borderRadius: 15,
+        justifyContent: 'center',
+        display: 'flex',
+        alignItems: 'center',
+    },
+
+    font: {
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+    fontDeteil: {
+        fontSize: 12,
+        fontWeight: 'normal'
+
+    },
+    ImgSetting: {
+        borderRadius: 200,
+    }
+
+};

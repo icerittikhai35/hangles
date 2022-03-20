@@ -8,17 +8,17 @@ import { Link } from "react-router-dom";
 
 const HeaderFeed = (props) => {
   return (
-    <div style={{ width: '100%' }}>
+    <div style={styles.container}>
       <nav className="navbar fixed-top "  >
-        <div style={{ padding: '10px 20px', }}>
+        <div style={styles.LeftRightHeader}>
           <Link to="/Notifications">
             <img src={Notification} alt="" width={20} />
           </Link>
         </div>
-        <div style={{ margin: 'auto', }}>
+        <div style={styles.centerHeader}>
           <img src={Logo} alt="" width={110} />
         </div>
-        <div style={{ padding: '15px 20px' }}>
+        <div style={styles.LeftRightHeader}>
           <Link to="/Wallet">
             <img src={Shopbag} alt="" width={20} />
           </Link>
@@ -28,5 +28,17 @@ const HeaderFeed = (props) => {
     </div>
   )
 };
+
+const styles = {
+  container: {
+    width: '100%'
+  },
+  LeftRightHeader: {
+    padding: '10px 20px',
+  },
+  centerHeader: {
+    margin: 'auto',
+  },
+}
 
 export default HeaderFeed;

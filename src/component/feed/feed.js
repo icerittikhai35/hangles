@@ -42,7 +42,7 @@ function Feed() {
                         <label style={styles.fontOther}>ดูเพิ่มเติม<KeyboardDoubleArrowRightIcon width={20} /></label>
                     </div>
 
-                    <div class="scrollmenu">
+                    <div class="scrollmenu" >
                         <div>
                             {popular}
                         </div>

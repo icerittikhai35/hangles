@@ -20,7 +20,7 @@ function DetailProduct() {
 
         <div style={styles.container}>
             <Navigation />
-
+            {/* ------------------------------แถบHeader--------------------------------- */}
             <div style={styles.divHeader}>
                 <nav style={styles.navHeader}>
                     <div style={{ padding: '15px 20px' }}>
@@ -49,7 +49,7 @@ function DetailProduct() {
 
             </div>
 
-
+            {/* ------------------------------รูปภาพและรายละเอียดสินค้า--------------------------------- */}
 
             <div style={styles.containerDetail}>
                 <div style={styles.divImgProduct}>
@@ -67,8 +67,8 @@ function DetailProduct() {
 
                 <div style={styles.divDetailProduct}>
                     <div style={{ width: '42%', margin: 'auto', }}>
-                        <div style={{ width: '40%', display: 'flex', justifyContent: 'space-between', }}>
-                            <div style={{ width: '40%', height: 28, backgroundColor: '#e2e2e2', borderRadius: 10, paddingLeft: 10 }}>
+                        <div style={{ maxWidth: '15vh', display: 'flex', justifyContent: 'space-between', }}>
+                            <div style={{ width: '50%', height: 28, backgroundColor: '#e2e2e2', borderRadius: 15, paddingLeft: 10 }}>
                                 <img src={Heart} alt="" width={20} />
                                 <label style={{ fontWeight: 'bold', fontSize: 14, paddingLeft: 2 }} >0</label>
                             </div>
@@ -122,8 +122,6 @@ function DetailProduct() {
             </div>
 
 
-
-
         </div>
 
 
@@ -148,7 +146,7 @@ const styles = {
     containerDetail: {
         width: '100%',
         margin: 'auto',
-  
+
     },
     divImgProduct: {
         width: '100%',
